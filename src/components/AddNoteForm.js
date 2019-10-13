@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import NotesContext from "../context/notes-context";
 
-export default ({ dispatch }) => {
+export default () => {
+  const { dispatch } = useContext(NotesContext);
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const addNote = e => {
@@ -9,6 +11,7 @@ export default ({ dispatch }) => {
     setTitle("");
     setBody("");
   };
+
   return (
     <div>
       <p>Add note</p>
