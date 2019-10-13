@@ -13,7 +13,7 @@ export default () => {
   };
 
   return (
-    <div>
+    <>
       <p>Add note</p>
       <form onSubmit={addNote}>
         <input value={title} onChange={e => setTitle(e.target.value)} />
@@ -23,6 +23,6 @@ export default () => {
         ></textarea>
         <button>add note</button>
       </form>
-    </div>
+    </>
   );
 };
